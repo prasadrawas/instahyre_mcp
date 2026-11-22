@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instahyre-mcp"
+version = "1.0.0"
+description = "Production Model Context Protocol (MCP) server for Instahyre candidate profile management, matching tech opportunities, job search, and applications"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Prasad Rawas"}
+]
+keywords = ["mcp", "model-context-protocol", "instahyre", "tech-jobs", "claude", "gemini", "job-search", "agent"]
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0.0",
+    "uvicorn>=0.30.0",
+    "starlette>=0.38.0",
+    "httpx>=0.27.0",
+    "pypdf>=4.0.0"
+]
+
+[project.scripts]
+instahyre-mcp = "instahyre_mcp.__main__:main"
